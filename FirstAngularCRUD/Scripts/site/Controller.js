@@ -66,6 +66,7 @@
         clearFields();
         $scope.Action = "Add";
         $scope.personForm = true;
+
     }
     $scope.deletePerson = function (person) {
         var getPersonData = crudService.deletePerson(person.PersonId);
