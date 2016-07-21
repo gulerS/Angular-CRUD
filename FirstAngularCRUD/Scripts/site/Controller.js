@@ -22,6 +22,7 @@
             $scope.Address = person.Address;
             $scope.Action = "Update";
             $scope.personForm = true;
+            scrollTo(0, 0);
         }, function () { alert("Error in getting person records"); });
     }
 
@@ -66,6 +67,7 @@
         clearFields();
         $scope.Action = "Add";
         $scope.personForm = true;
+        scrollTo(0,0);
 
     }
     $scope.deletePerson = function (person) {
