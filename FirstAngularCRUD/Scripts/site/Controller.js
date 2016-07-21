@@ -1,4 +1,4 @@
-﻿app.controller("CRUDCtrl", function ($scope, crudService) {
+﻿app.controller("CRUDCtrl", function ($scope, crudService, $timeout) {
     $scope.personForm = false;
     getAllPersons();
 
@@ -40,7 +40,9 @@
             getPersonData = crudService.updatePerson(person);
             getPersonData.then(function (e) {
                 getAllPersons();
-                alert(e.data);
+                $timeout(function () {
+                    alert(e.data);
+                });
                 $scope.PersonForm = false;
             }, function () {
                 alert("Error in updating book record");
@@ -49,7 +51,10 @@
             getPersonData = crudService.AddPerson(person);
             getPersonData.then(function (e) {
                 getAllPersons();
-                alert(e.data);
+                $timeout(function() {
+                    alert(e.data);
+                });
+              
                 $scope.personForm = false;
             }, function () {
                 alert("Error in adding book record");
@@ -65,7 +70,9 @@
     $scope.deletePerson = function (person) {
         var getPersonData = crudService.deletePerson(person.PersonId);
         getPersonData.then(function (e) {
-            alert(e.data);
+            $timeout(function () {
+                alert(e.data);
+            });
             getAllPersons();
         }, function () {
             alert("Error in deleting person record");
