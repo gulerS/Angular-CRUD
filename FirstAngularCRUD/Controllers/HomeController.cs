@@ -16,6 +16,8 @@ namespace FirstAngularCRUD.Controllers
         public JsonResult GetAllPersons()
         {
         
+        //Test3
+        
             Database.SetInitializer(new DropCreateDatabaseIfModelChanges<PersonDbContext>());
             using (PersonDbContext db = new PersonDbContext())
             {
