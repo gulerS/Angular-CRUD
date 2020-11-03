@@ -17,7 +17,7 @@ namespace FirstAngularCRUD.Controllers
         {
         
         //Test3
-        
+        //Test2
             Database.SetInitializer(new DropCreateDatabaseIfModelChanges<PersonDbContext>());
             using (PersonDbContext db = new PersonDbContext())
             {
