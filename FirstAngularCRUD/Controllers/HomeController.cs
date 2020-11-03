@@ -10,17 +10,12 @@ namespace FirstAngularCRUD.Controllers
     {
         public ActionResult Index()
         {
-        
-        //Test6
-        //OIWEUSSS
             return View();
         }
 
         public JsonResult GetAllPersons()
         {
-        
-        //Test3
-        //Test2
+        //test
             Database.SetInitializer(new DropCreateDatabaseIfModelChanges<PersonDbContext>());
             using (PersonDbContext db = new PersonDbContext())
             {
